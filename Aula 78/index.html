@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>aula 78</title>
+    </head>
+    <body>
+        <p>
+            uma matriz
+            <h4 id="declarandoMatriz"></h4>
+        </p>
+        <hr>
+
+        <p>
+            primeiro elemento
+            <h4 id="primeiroElemento"></h4>
+        </p>
+        <hr>
+        
+        <p>
+            comprimento
+            <h4 id="comprimentoDaMatriz"></h4>
+        </p>
+        <hr>
+
+        <p>
+            loop
+            <h4 id="loop"></h4>
+        </p>
+        <hr>
+
+        <p>
+            adicionando elemento
+            <h4 id="adicionando"></h4>
+        </p>
+        <hr>
+
+        <p>
+            nova matriz
+            <h4 id="novaMatriz"></h4>
+        </p>
+        <hr>
+
+        <p>
+            matriz organizada
+            <h4 id="matrizOrganizada"></h4>
+        </p>
+        <hr>
+
+        <p>
+            matriz desorganizada
+            <h4 id="matrizDesorganizada"></h4>
+        </p>
+        <hr>
+
+        <p>
+            criando um array só de numeros
+            <h4 id="arrayDeNumeros"></h4>
+        </p>
+        <hr>
+
+        <p>
+            achando o maior numero
+            <h4 id="maiorNumero"></h4>
+        </p>
+        <hr>
+
+        <p>
+            achando o menor numero
+            <h4 id="menorNumero"></h4>
+        </p>
+        <hr>
+
+        <p>
+           adicionando um elemento no inicio do array
+            <h4 id="adicionandoElemento"></h4>
+        </p>
+        <hr>
+
+        <p>
+            removendo um elemento do inicio
+            <h4 id="removendoElemento"></h4>
+        </p>
+        <hr>
+
+        <p>
+            juntando array
+            <h4 id="juntandoArray"></h4>
+        </p>
+        
+
+        <script>
+
+            var gostosuras=["pizza","hamburguer","brigadeiro"];
+            document.getElementById("declarandoMatriz").innerHTML=gostosuras;
+
+            var primeiraGostosura=gostosuras[0];
+            document.getElementById("primeiroElemento").innerHTML=primeiraGostosura;
+
+            var comprimento=gostosuras.length;
+            document.getElementById("comprimentoDaMatriz").innerHTML=comprimento;
+
+            var elementoDaMatriz="";
+            for(i=0;i<gostosuras.length;i++){
+                elementoDaMatriz=elementoDaMatriz+gostosuras[i]+"<br>";
+            }
+            document.getElementById("loop").innerHTML=elementoDaMatriz;
+
+            gostosuras.push("sorvete")
+            document.getElementById("adicionando").innerHTML=gostosuras;
+
+            var alfabeto=["r","j","y","i"];
+            document.getElementById("novaMatriz").innerHTML=alfabeto;
+        
+            alfabeto.sort();
+            document.getElementById("matrizOrganizada").innerHTML=alfabeto;
+
+            alfabeto.reverse();
+            document.getElementById("matrizDesorganizada").innerHTML=alfabeto;
+
+            var numeros=[28,6,10,22,5];
+            document.getElementById("arrayDeNumeros").innerHTML=numeros;
+
+            var maxNumero=Math.max.apply(Math,numeros);
+            document.getElementById("maiorNumero").innerHTML=maxNumero;
+
+            var minNumero=Math.min.apply(Math,numeros);
+            document.getElementById("menorNumero").innerHTML=minNumero;
+
+            gostosuras.unshift("pipoca");
+            document.getElementById("adicionandoElemento").innerHTML=gostosuras;
+
+            gostosuras.shift();
+            document.getElementById("removendoElemento").innerHTML=gostosuras;
+
+            var starWars1=["luke","leia","han solo","chewbacca","ray"];
+            var ladoNegro=["darth vader","palpatine","darth maul","kylo ren"]
+
+            var juntando=starWars1.concat(ladoNegro);
+            document.getElementById("juntandoArray").innerHTML=juntando;
+
+        </script>
+    </body>
+</html>
